@@ -33,9 +33,9 @@
                                                     <td> {{ $contact->email}}</td>
                                                     <td> {{ $contact->pesan}}</td>
                                                     <td> 
-                                                        <a href="{{ route('contacts.edit', $contact->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                                                        <a href="{{ route('contacts.edit', $contact->id)}}">Edit</a>
                                                         |
-                                                        <a href="{{ route('contacts.destroy', $contact->id)}}"><i class="fa-solid fa-trash" style="color:red"></i></a>
+                                                        <a href="{{ route('contacts.destroy', $contact->id)}}"><i class="fas fa-trash" style="color:red"></i></a>
                                                     </td>
                                                 </tr>
                                             @endforeach

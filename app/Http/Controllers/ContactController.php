@@ -64,8 +64,8 @@ class ContactController extends Controller
      */
     public function edit($id)
     {
-        $contact = Contact::findOrFail();
-        return view('admin/contacts/edit', compact('contacts'));
+        $contact = Contact::findOrFail($id);
+        return view('admin/contacts/edit', compact('contact'));
     }
 
     /**
@@ -77,11 +77,11 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $contact = Contact::findOrFail();
+        $contact = Contact::findOrFail($id);
         $contact->update($request->all());
         $contact->save();
 
-        return redirect()->route('contacts,index');
+        return redirect()->route('contacts.index');
     }
 
     /**
@@ -92,9 +92,9 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        $contact = Contact::findOrFail();
+        $contact = Contact::findOrFail($id);
         $contact->delete();
 
-        return redirect()->route('contacts,index');
+        return redirect()->route('contacts.index');
     }
 }
