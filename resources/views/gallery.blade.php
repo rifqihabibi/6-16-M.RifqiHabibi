@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-</head>
-<body>
-<h1>Gallery RIFKI</h1>
+@extends('layouts.main')
 
-    
-</body>
-</html>
+@section('container')
+    <h1>Gallery Rifki</h1>
+@endsection
